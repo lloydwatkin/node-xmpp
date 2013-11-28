@@ -1,12 +1,9 @@
 # Changelog
 
 * 0.11.0
-  * `node-xmpp` as we know it no longer exists. The project has been split to the following modules:
-    * [node-xmpp-core](https://github.com/node-xmpp/node-xmpp-core)
-    * [node-xmpp-client](https://github.com/node-xmpp/node-xmpp-client)
-    * [node-xmpp-component](https://github.com/node-xmpp/node-xmpp-component)
-    * [node-xmpp-server](https://github.com/node-xmpp/node-xmpp-server)
-  * We will be keeping the same API for the short term so installing `node-xmpp` will continue to work, however we encourage developers to use the appropriate module for their next project and upgrade existing projects soon
+  * Deprecated `JID.setUser()`, use `JID.setLocal()` [see RFC6122] (node-xmpp/node-xmpp-core#2)
+  * Restructured into separate modules (#195)
+  * `Connection.send()` is now able to eat strings (#200)
 * 0.10.8
   * Allow user to send a plain text stanza via send() method (#200)
 * 0.10.7
